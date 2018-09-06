@@ -1,0 +1,22 @@
+{
+  "name": "hello-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lindyloutama/hello-express.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lindyloutama/hello-express/issues"
+  },
+  "homepage": "https://github.com/lindyloutama/hello-express#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
