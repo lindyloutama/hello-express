@@ -1,8 +1,15 @@
-const express = require('express')
-const helloWorld = require('./controllers/helloWorld');
+const express = require('express');
 
-const app = express()
+const app = express();
+const bodyParser = require('body-parser');
+
+const helloWorld = require('./controllers/helloWorld');
+const createShoppingList = require('./controllers/createShoppingList');
+
+app.use(bodyParser.json());
 
 app.get('/', helloWorld);
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'))
+app.post('/shoppingList', createShoppingList);
+
+app.listen(3000, () => console.log('Example app listening on port 3000!'));
