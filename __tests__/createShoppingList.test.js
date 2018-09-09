@@ -8,7 +8,7 @@ it('creates a new shopping list', (done) => {
 
   const request = httpMocks.createRequest({
     method: 'POST',
-    url: '/shopping-lists',
+    url: '/shoppingList',
     body: {
       items: ['broccoli', 'bread', 'bananas'],
     },
@@ -21,7 +21,7 @@ it('creates a new shopping list', (done) => {
 
   response.on('end', () => {
     const filename = response._getData().filename;
-    const filePath = path.join(__dirname, '../controllers/shoppingLists', filename);
+    const filePath = path.join(__dirname, '../controllers/shoppingList', filename);
 
     fs.readFile(filePath, 'utf8', (error, data) => {
       expect(data).toBe(JSON.stringify(request.body));
